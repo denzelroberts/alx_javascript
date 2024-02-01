@@ -2,4 +2,4 @@ function add(){
     return integer1 + integer2;
 }
 
-add();
+add(integer1,integer2);
