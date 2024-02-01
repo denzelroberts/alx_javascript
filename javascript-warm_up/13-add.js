@@ -1,5 +1,3 @@
-function add(int1,int2){
+function add(int1, int2){
     return int1 + int2;
 }
-
-add(int1,int2);
