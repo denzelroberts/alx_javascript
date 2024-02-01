@@ -1,5 +1,1 @@
-function add(a, b){
-    return a + b;
-}
-
-let add = add();
+const add = (a, b) => a + b;
