@@ -4,7 +4,7 @@ const myObject = {
   };
   console.log(myObject);
 
-  function incr(increase){
+  function incr(){
     return myObject.value ++;
   }
 
