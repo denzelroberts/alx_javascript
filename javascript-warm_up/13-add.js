@@ -1,5 +1,5 @@
-function add(int1, int2){
-    return int1 + int2;
-}
+let x = add(a,b)
 
-add()
+function add(a, b){
+    return a + b;
+}
