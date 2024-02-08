@@ -2,9 +2,12 @@
 let request = require('request');
 let url = process.argv[2];
 request(url, function (err, response, body) {
-  if (err) {
+  if (err) 
+  {
     console.log(err);
-  } else if (response.statusCode === 200) {
+  } 
+  else if (response.statusCode === 200) 
+  {
     let filmList = JSON.parse(body).results;
     let count = 0;
     for (let film in filmList) {
@@ -16,7 +19,8 @@ request(url, function (err, response, body) {
       }
     }
     console.log(count);
-  } else {
+  } 
+  else {
     console.log('Wrong status code');
   }
 });
