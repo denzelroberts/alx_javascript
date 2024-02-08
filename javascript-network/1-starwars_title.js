@@ -1,6 +1,6 @@
 #!/usr/bin/node
 let request = require('request');
-let url = 'https://swapi-api.alx-tools.com/api/films/id';
+let url = 'https://swapi-api.alx-tools.com/api/films/:id';
 let episodeNumber = process.argv[2];
 request(url + episodeNumber, function (err, response, body) {
   if (err) {
