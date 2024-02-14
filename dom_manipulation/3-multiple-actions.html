@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creating and Removing Elements</title>
+</head>
+<body>
+  <div id="container"></div>
+  <script>
+    //select container
+    const selectContainer = document.getElementById("container");
+    //create paragraph
+    const createParagraph = document.createElement("p");
+    createParagraph.textContent = "New Paragraph";
+    //append paragraph to container
+    selectContainer.appendChild(createParagraph);
+
+    //create a button
+    const createButton = document.createElement("button");
+    createButton.textContent = "show/hide";
+    //append button to container
+    selectContainer.appendChild(createButton);
+    
+    //defining a default state
+    let visibilityStatus = true;
+
+    //creating button action
+    createButton.addEventListener("click", function(){
+        if(visibilityStatus){
+            createParagraph.style.display = "none";
+        }
+        else{
+            createParagraph.style.display = "block"
+        }
+        visibilityStatus = !visibilityStatus;
+    });
+  </script>
+</body>
+</html>
