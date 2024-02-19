@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login to the website</title>
+    </head>
+    <body>
+        <div>
+            <h1>
+                Login to the website
+            </h1>
+        </div>
+        <div>
+            <input type="text" id="firstname" placeholder="Firstname">
+            <input type="text" id="email" placeholder="Email">
+            <button onclick="setCookies()">Log me in</button>
+        </div>
+        <div>
+            <h1>
+                Cookies
+            </h1>
+        </div>
+        <div>
+            <button onclick="showCookies()">Show the cookies</button>
+        </div>
+
+        <script>
+            //creating function
+            function setCookies(){
+                //getting elements by ID
+                const firstnameInput = document.getElementById("firstname");
+                const emailInput = document.getElementById("email");
+
+                // Set cookies with 10-day expiration
+                const tenDaysInSeconds = 10 * 24 * 60 * 60; // 10 days in seconds
+                const expirationDate = new Date(Date.now() + tenDaysInSeconds * 1000).toUTCString();
+
+                document.cookie = `firstname=${firstnameInput.value}; max-age=${tenDaysInSeconds}; expires=${expirationDate}`;
+                document.cookie = `email=${emailInput.value}; max-age=${tenDaysInSeconds}; expires=${expirationDate}`;
+            }
+
+            function showCookies(){
+                //creating paragraph to display cookies
+                const cookiesParagraph = document.createElement('p');
+                const cookiesValue = document.cookie;
+
+                cookiesParagraph.innerHTML = `Cookies: ${cookiesValue}`;
+                document.body.appendChild(cookiesParagraph);
+            }
+        </script>
+    </body>
+</html>
